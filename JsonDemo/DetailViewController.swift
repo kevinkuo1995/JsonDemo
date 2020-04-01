@@ -56,7 +56,6 @@ class DetailViewController: UIViewController {
     }
     
     fileprivate func setupLayout() {
-        // Do any additional setup after loading the view.
         
         view.backgroundColor = .white
         
@@ -79,8 +78,7 @@ class DetailViewController: UIViewController {
         detailTitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         detailTitleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         detailTitleLabel.topAnchor.constraint(equalTo: detailIdLabel.bottomAnchor).isActive = true
-//        detailTitleLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
-
+        
         dataViewModel.downloadImage(url: imageData.url) { (image) in
             if let image = image {
                 DispatchQueue.main.async {
